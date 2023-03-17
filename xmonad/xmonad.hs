@@ -9,6 +9,7 @@ import System.Exit
 import XMonad.Layout.Spacing
 import XMonad.Util.Run
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.EwmhDesktops
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -262,7 +263,7 @@ myStartupHook = do
 main = do 
 	
 	xmproc <- spawnPipe "xmobar -x 0 /home/zamyaza/.config/xmobar/xmobarrc"
-	xmonad $ docks defaults
+	xmonad . docks . ewmhFullscreen . ewmh $ defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
