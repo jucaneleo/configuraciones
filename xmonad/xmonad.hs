@@ -50,8 +50,8 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
-myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#730000"
+myNormalBorderColor  = "#4D4D4D"
+myFocusedBorderColor = "#B46060"
 --startuphook------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
 --
@@ -64,9 +64,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_p     ), spawn "rofi -show drun")
 
     -- terminal tmux
-    , ((modm,               xK_a     ), spawn "kitty tmux")
+    , ((modm,               xK_a     ), spawn "kitty tmux a")
 
-    , ((modm,               xK_e     ), spawn "thunar ~")
+    , ((modm,               xK_e     ), spawn "thunar")
     --launch browser
 
     , ((modm,               xK_f     ), spawn "chromium")
@@ -150,7 +150,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3
     --
     [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
-        | (key, sc) <- zip [xK_z, xK_e, xK_r] [0..]
+        | (key, sc) <- zip [xK_z, xK_u, xK_r] [0..]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 
