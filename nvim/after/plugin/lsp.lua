@@ -5,16 +5,18 @@ local lsp = require('lsp-zero').preset({
   suggest_lsp_servers = false,
 })
 
+lsp.setup()
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  severity_sort = false,
+  float = true,
+})
+
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 
 lsp.setup()
-
-lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'html',
-  'cssls',
-  'emmet_ls',
-  'lua_ls',
-})

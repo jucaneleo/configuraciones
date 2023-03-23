@@ -15,8 +15,10 @@ return require('packer').startup(function(use)
 
   use ('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
 
-  use ('nvim-lua/plenary.nvim') 
+  use ('nvim-lua/plenary.nvim')
   use ('ThePrimeagen/harpoon')
+  use ('sainnhe/everforest')
+  use ('cohama/lexima.vim')
 
 
   use {
@@ -41,6 +43,11 @@ return require('packer').startup(function(use)
     {'rafamadriz/friendly-snippets'}, -- Optional
   }
 }
+	use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
+
 
 
 end)
