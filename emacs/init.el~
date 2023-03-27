@@ -1,0 +1,37 @@
+;melpa
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+(package-refresh-contents)
+
+;theme
+(unless (package-installed-p 'monokai-theme)
+  (package-install 'monokai-theme))
+(load-theme 'monokai t)
+(evil-mode 1) (set-frame-parameter (selected-frame)'alpha '(90 . 99))
+ (add-to-list 'default-frame-alist'(alpha . (99 . 99)))
+
+;helm
+(unless (package-installed-p 'helm)
+  (package-install 'helm))
+(require 'helm)
+
+(helm-mode 1)
+
+;keymaps helm
+(global-set-key (kbd "C-SPC f") nil)
+(global-set-key (kbd "C-SPC f") 'helm-find-files)
+
+;evil
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
+(require 'evil)
+
+;keymaps evil
+(define-key evil-motion-state-map (kbd "{") 'evil-ex)
+
+;keymaps
+
+
+
+

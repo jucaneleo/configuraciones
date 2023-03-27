@@ -6,7 +6,11 @@ vim.keymap.set("n", "11", ":q!<CR>")
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
 vim.keymap.set("n", "<leader>q", vim.cmd.q)
 vim.keymap.set("n", "<leader>2", vim.cmd.wq)
+vim.keymap.set("n", "<leader>t", ":b#<CR>")
 
+
+
+-- nevos mappings para f comand
 vim.keymap.set("n", "<C-l>", "<Nop>", { silent = true, remap = false })
 vim.keymap.set("n", "<C-l>", ";")
 vim.keymap.set("n", "<C-h>", "<Nop>", { silent = true, remap = false })

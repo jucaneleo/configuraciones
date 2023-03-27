@@ -12,15 +12,19 @@ return require('packer').startup(function(use)
 
   use { "bluz71/vim-moonfly-colors", as = "moonfly" }
   use 'Mofiqul/dracula.nvim'
+  use 'sainnhe/everforest'
+  use 'folke/tokyonight.nvim'
+  use 'KabbAmine/vCoolor.vim'
+
+
+  use 'nvim-lua/plenary.nvim'
+  use 'ThePrimeagen/harpoon'
+  use 'cohama/lexima.vim'
+  use 'echasnovski/mini.comment'
+  use 'ggandor/leap.nvim'
+
 
   use ('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
-
-  use ('nvim-lua/plenary.nvim')
-  use ('ThePrimeagen/harpoon')
-  use ('sainnhe/everforest')
-  use ('cohama/lexima.vim')
-
-
   use {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v1.x',

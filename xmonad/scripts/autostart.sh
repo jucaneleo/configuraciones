@@ -7,5 +7,6 @@ setxkbmap latam
 xinput --set-prop 16'libinput Accel Speed' -0.7
 setxkbmap -option caps:escape
 udiskie &
+polybar &
 
 

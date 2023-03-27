@@ -1,6 +1,6 @@
 
 function Colorear(color)
-	color = color or "everforest"
+	color = color or "tokyonight-moon"
 	vim.opt.termguicolors = true
 	vim.cmd.colorscheme(color)
 	vim.api.nvim_set_hl(0,"Normal", {bg = "none"})

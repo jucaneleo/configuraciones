@@ -52,7 +52,7 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 -- Border colors for unfocused and focused windows, respectively.
 --
 myNormalBorderColor  = "#4D4D4D"
-myFocusedBorderColor = "#B46060"
+myFocusedBorderColor = "#723873"
 --startuphook------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
 --
@@ -262,7 +262,6 @@ myStartupHook = do
 --
 main = do 
 	
-	xmproc <- spawnPipe "xmobar -x 0 /home/zamyaza/.config/xmobar/xmobarrc"
 	xmonad . docks . ewmhFullscreen . ewmh $ defaults
 
 -- A structure containing your configuration settings, overriding
